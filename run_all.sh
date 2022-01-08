@@ -22,7 +22,10 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 echo ""
-cd "$(dirname $(readlink $0))"
+# Cd into the directory of the library
+script="$(readlink $0)"
+if [ -z "$script" ]; then script="$0"; fi
+cd "$(dirname "$script")"
 # Importing common functions.
 . ./libraries/common.sh
 

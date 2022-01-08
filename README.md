@@ -4,6 +4,13 @@
 
 This script allows you to execute common sequencially scripts on various servers. It can be use to quickly run maintainance scripts on several servers while having proper feedback when things go wrong.
 
+## Dependencies:
+This script has several dependencies:
+- bash
+- awk
+- sshpass
+- docker on remote server if it does not have it.
+
 ## How to use
 
 ### Creating scripts
