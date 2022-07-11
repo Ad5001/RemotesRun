@@ -36,6 +36,8 @@ RESET_INVERT="\e[27m"
 GRAY_FG="\e[90m"
 # Sets the forground color to green.
 GREEN_FG="\e[92m"
+# Sets the forground color to yellow
+YELLOW_FG="\e[38;5;220m"
 # Sets the forground color to blue.
 BLUE_FG="\e[94m"
 
@@ -51,7 +53,7 @@ BLACK_FG="\e[30m"
 # Sets the forground color to light green.
 L_GREEN_FG="\e[32m"
 # Sets the forground color to orange.
-ORANGE_FG="\e[33m"
+ORANGE_FG="\e[38;5;166m" #"\e[33m"
 # Sets the forground color to red.
 RED_FG="\e[38;5;204m"
 
@@ -60,14 +62,15 @@ BLACK_BG="\e[40m"
 # Sets the background color to light green.
 L_GREEN_BG="\e[42m"
 # Sets the background color to orange.
-ORANGE_BG="\e[43m"
+ORANGE_BG="\e[48;5;166m"
 # Sets the background color to red.
 RED_FG="\e[48;5;204m"
 
 # Run a command as root.
 # Signature: (<string command>) -> string
 run_as_root() {
-    echo "$PASSWORD" | sudo -p "" -i -S bash -c "$@"
+    #echo "$PASSWORD" | sudo -p "" -i -S bash -c "$@"
+    sudo -i -S bash -c "$@"
 }
 
 # Simple info blue command.

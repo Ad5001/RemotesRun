@@ -41,7 +41,7 @@ for folder in "$REMOTES"/*; do
     if [ -z "$(which powerline)" ]; then
         echo -e -n "${L_GREEN_BG}${BLACK_FG} Password for ${RESET_INVERT}${ORANGE_BG}   $host  ${RESET} 🔑 > "
     else
-        echo -e -n "${L_GREEN_BG}${BLACK_FG} Password for ${ORANGE_FG}${INVERT}${RESET_INVERT}${ORANGE_BG}${BLACK_FG}  ${host} ${GRAY_FG}${INVERT}${RESET_INVERT}${GRAY_BG}${BLACK_FG} 🔑 ${INVERT} ${RESET}"
+        echo -e -n "${L_GREEN_BG}${BLACK_FG} Password for ${ORANGE_FG}${INVERT}${RESET_INVERT}${ORANGE_BG}${YELLOW_FG}  ${host} ${GRAY_FG}${INVERT}${RESET_INVERT}${GRAY_BG}${BLACK_FG} 🔑 ${INVERT} ${RESET}"
     fi
     read -s pswd
     echo -e "\n"
